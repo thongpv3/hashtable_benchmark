@@ -9,16 +9,16 @@ template <typename  K, typename V>
 class HashTable {
 public:
     //capacity
-    bool empty() = 0;
-    size_t size() = 0;
+    virtual bool empty() {};
+    virtual size_t size() {};
 
     //element access
-    bool isContains(K key) = 0;
+    virtual bool isContains(const K& key) {};
 
     //Modifiers
-    bool insert(K key, V value) = 0;
-    bool erase(K key) = 0;
-    void clear() = 0;
+    virtual bool insert(const K& key, const V& value) {};
+    virtual void erase(const K& key) {};
+    virtual void clear() {};
 };
 
 #endif //HASHTABLE_HASHTABLE_H

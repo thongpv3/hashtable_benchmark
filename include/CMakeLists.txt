@@ -5,5 +5,11 @@ set(GG_BENCHMARK_INCLUDE ${CMAKE_CURRENT_SOURCE_DIR}/benchmark/include PARENT_SC
 
 #add junction library
 add_subdirectory(junction)
-set(JUNCTION_INCLUDE ${CMAKE_CURRENT_SOURCE_DIR}/junction PARENT_SCOPE)
+
+set(JUNCTION_INCLUDE
+        ${CMAKE_CURRENT_SOURCE_DIR}/junction
+        ${CMAKE_CURRENT_BINARY_DIR}/junction/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/turf
+        ${CMAKE_CURRENT_BINARY_DIR}/junction/turf/include
+        PARENT_SCOPE)
 #add turf for junction dependency

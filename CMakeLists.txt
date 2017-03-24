@@ -10,3 +10,5 @@ add_subdirectory(include)
 
 #add tests
 add_subdirectory(tests)
+
+add_subdirectory(hashtable)
